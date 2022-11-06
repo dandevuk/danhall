@@ -1,3 +1,9 @@
+/* ROOTS */
+
+:root {
+    --green: #5fd345;
+}
+
 /* FONTS */
 
 @font-face {
@@ -61,7 +67,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #5fd345; 
+    background: var(--green); 
     border-radius:4px;
 }
 
@@ -150,7 +156,7 @@ header .logo svg {
 }
 
 header .logo svg path.top {
-    fill: #5fd345;
+    fill: var(--green);
 }
 
 header .logo svg path.bottom {
@@ -173,16 +179,16 @@ header .menu svg rect.middle {
 }
 
 header .menu:hover svg rect.middle {
-    fill: #5fd345;
+    fill: var(--green);
     transition-delay: 0.1s;
 }
 
 header .menu:hover svg rect.top {
-    fill: #5fd345;
+    fill: var(--green);
 }
 
 header .menu:hover svg rect.bottom {
-    fill: #5fd345;
+    fill: var(--green);
     transition-delay: 0.2s;
 }
 
@@ -216,11 +222,32 @@ section .content {
     font-family: 'Archivo Black';
     opacity: 0;
     transition: 0.6s all ease-in;
+    position: relative;
 }
 
 section .content.show {
     transform: translate(0);
     opacity: 1;
+}
+
+section .content .section-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    font-family: 'Chakra Petch';
+    color: var(--green);
+}
+
+section .content .section-title span {
+    animation: flash 0.6s ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes flash {
+    0% {opacity: 0}
+    100% {opacity: 1}
 }
 
 .text-icons-grid {
@@ -232,6 +259,10 @@ section .content.show {
 .text-icons-grid .text {
     display: flex;
     align-items: center;
+    font-size: 45px;
+}
+
+.text-icons-grid .text h1 {
     font-size: 45px;
 }
 
@@ -257,6 +288,33 @@ section .content.show {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 20px;
+}
+
+.icon-grid .icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: icon-pop 0.5s ease;
+    transition: 0.5s all ease;
+    animation-delay: 0.5s;
+}
+
+.icon-grid .icon:nth-last-of-type(2) {
+    animation-delay: 0.6s;
+}
+
+.icon-grid .icon:nth-last-of-type(3) {
+    animation-delay: 0.7s;
+}
+
+.icon-grid .icon:nth-last-of-type(4) {
+    animation-delay: 0.8s;
+}
+
+@keyframes icon-pop {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
 }
 
 .icon-grid .icon img{
