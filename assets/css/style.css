@@ -49,6 +49,27 @@ body {
     background: linear-gradient(60deg, rgba(26,26,26,1) 0%, rgba(3,10,48,1) 100%);
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(3,10,48,1); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5fd345; 
+    border-radius:4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 * {
     box-sizing: border-box;
 }
@@ -212,6 +233,23 @@ section .content.show {
     display: flex;
     align-items: center;
     font-size: 45px;
+}
+
+.text-icons-grid .text span {
+    background: rgb(203,76,200);
+    background: linear-gradient(40deg, rgba(203,76,200,1) 0%, rgba(7,215,231,1) 25%, rgba(203,76,200,1) 50%, rgba(7,215,231,1) 75%, rgba(203,76,200,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: text-gradient 3s ease infinite;
+    animation: text-gradient 10s ease infinite;
+    transition: 10s all;
+    background-size: 400% 400%;
+}
+
+@keyframes text-gradient {
+    0%{background-position:0 50%}
+    50%{background-position:100% 50%}
+    to{background-position:0 50%}
 }
 
 .icon-grid {
