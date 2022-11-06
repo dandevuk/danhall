@@ -30,3 +30,17 @@ menu_burger.addEventListener('click', ()=> {
         header.classList.add('menu-open');
     }
 })
+
+// MOVE CONTENT IN FROM LEFT WHEN IN VIEW
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show')
+        }
+    })
+});
+
+const content_elements = document.querySelectorAll('.content');
+content_elements.forEach((element) => observer.observe(element));
