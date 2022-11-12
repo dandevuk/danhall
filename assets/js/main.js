@@ -15,8 +15,6 @@ window.addEventListener('scroll', (e)=> {
 const menu_burger = document.querySelector('.menu svg');
 const menu_burger_rects = document.querySelectorAll('.menu svg rect');
 
-console.log('Rects', menu_burger_rects)
-
 menu_burger.addEventListener('click', ()=> {
     if (menu_burger.classList.contains('close')) {
         menu_burger.classList.remove('close');
@@ -44,3 +42,24 @@ const observer = new IntersectionObserver((entries) => {
 
 const content_elements = document.querySelectorAll('.content');
 content_elements.forEach((element) => observer.observe(element));
+
+// CHANGE DATA LINK TITLE
+
+const links = document.querySelectorAll('.social-links a');
+
+const link_title = document.querySelector('.link-title');
+
+links.forEach((link) => {
+    link.addEventListener('mouseenter', () => {
+        let title = link.getAttribute('data-link');
+        link_title.innerHTML = title;
+
+        link_title.classList.add('slide-skew-in');
+        setTimeout(() =>{
+            link_title.classList.remove('slide-skew-in');
+        }, 400);
+    });
+    link.addEventListener('mouseout', () => {
+        link_title.innerHTML = '';
+    });
+})
