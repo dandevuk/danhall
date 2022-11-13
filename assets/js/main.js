@@ -3,7 +3,6 @@
 const header = document.querySelector('header');
 
 window.addEventListener('scroll', (e)=> {
-    console.log("SCROLL")
     header.classList.add('bounce');
     setTimeout(()=>{
         header.classList.remove('bounce');
@@ -33,7 +32,6 @@ menu_burger.addEventListener('click', ()=> {
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry)
         if (entry.isIntersecting) {
             entry.target.classList.add('show')
         }
