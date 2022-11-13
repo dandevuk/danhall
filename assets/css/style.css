@@ -123,7 +123,7 @@ main {
 .ecom-img img {
     object-fit: cover;
     filter: blur(4px) brightness(0.6);
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 .container {
@@ -389,9 +389,7 @@ section .content .section-title span {
 }
 
 .text-icons-grid {
-    display: grid;
-    grid-template-columns: auto 32%;
-    grid-gap: 50px;
+    
 }
 
 .text-icons-grid .text {
@@ -401,7 +399,7 @@ section .content .section-title span {
 }
 
 .text-icons-grid .text h1 {
-    font-size: 45px;
+    font-size: clamp(26px, 5vw, 65px);
 }
 
 .text-icons-grid .text span {
