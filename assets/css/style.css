@@ -77,7 +77,19 @@ h2 {
 h3 {
     font-size: 1.9rem;
     font-family: 'Archivo Black';
-    color: #fff;
+    color: #fff;    
+    margin: 10px 0;
+    margin-top: 0;
+    line-height: 1;
+}
+
+@media only screen and (max-width: 767.98px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
 }
 
 p {
@@ -130,6 +142,11 @@ main {
     margin: 150px auto;
     padding: 1.5rem;
     max-width: 1060px;
+}
+@media only screen and (max-width: 767.98px) {
+    .container {
+        gap: 20px;
+    }
 }
 .container.no-margin {
     margin: 0 auto;
@@ -388,10 +405,6 @@ section .content .section-title span {
     100% {opacity: 1}
 }
 
-.text-icons-grid {
-    
-}
-
 .text-icons-grid .text {
     display: flex;
     align-items: center;
@@ -399,7 +412,7 @@ section .content .section-title span {
 }
 
 .text-icons-grid .text h1 {
-    font-size: clamp(26px, 5vw, 65px);
+    font-size: clamp(35px, 5vw, 65px);
 }
 
 .text-icons-grid .text span {
@@ -409,7 +422,6 @@ section .content .section-title span {
     -webkit-text-fill-color: transparent;
     -webkit-animation: text-gradient 3s ease infinite;
     animation: text-gradient 10s ease infinite;
-    transition: 10s all;
     background-size: 400% 400%;
 }
 

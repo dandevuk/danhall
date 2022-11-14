@@ -10,6 +10,7 @@
     background: linear-gradient(0deg, rgba(21, 36, 49, 0.8) 0%, rgba(7,215,231,0) 100%);
     box-shadow: 3.3px 5px 12px rgb(0 0 0 / 60%);
 }
+
 .project-container:nth-of-type(even) {
     flex-direction: row-reverse;
 }
@@ -23,6 +24,7 @@
     filter: brightness(90%) contrast(90%) blur(0.4px) grayscale(10%);  
     box-shadow: 3.3px 5px 12px rgb(0 0 0 / 60%);
 }
+
 .project-container .image-overlay {
     opacity: 0.4;
     position: absolute;
@@ -38,7 +40,20 @@
     height: 100%;
     object-fit: cover;
 }
-.project-container .project-info h3 {
-    margin: 10px 0;
-    margin-top: 0;
+
+@media only screen and (max-width: 767.98px) {
+    .project-container {
+        flex-direction: column!important;
+        width: 96%;
+        gap: 20px;
+        border-radius: 32px;
+        padding: 20px;
+    }
+    .project-container .project-image {
+        border-radius: 20px;
+        min-height: 200px;
+    }
+    .project-container .project-image img {
+        position: absolute;
+    }
 }
