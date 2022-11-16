@@ -1,3 +1,37 @@
+// ELEMENT TO TRACK MOUSE
+
+// const ball = document.querySelector(".circle-blur");
+
+// let mouseX = 0;
+// let mouseY = 0;
+
+// let ballX = 0;
+// let ballY = 0;
+
+// let speed = 0.02;
+
+
+// function animate(){
+  
+//   let distX = mouseX - ballX;
+//   let distY = mouseY - ballY;
+  
+  
+//   ballX = ballX + (distX * speed);
+//   ballY = ballY + (distY * speed);
+  
+//   ball.style.left = ballX + "px";
+//   ball.style.top = ballY + "px";
+  
+//   requestAnimationFrame(animate);
+// }
+// animate();
+
+// document.addEventListener("mousemove", function(event){
+//   mouseX = event.pageX;
+//   mouseY = event.pageY;
+// })
+
 // APPLY BOUNCE ANIMATION TO HEADER ON SCROLL
 
 const header = document.querySelector('header');
@@ -63,34 +97,6 @@ links.forEach((link) => {
 })
 
 // DATE COUNTER
-
-// function counter(time)
-
-// setInterval(function() {
-//     var date = new Date("2021-03-31T09:00:00.000Z");
-//     var start_time = date.getTime() / 1000;
-
-//     var current_date = new Date();
-//     var now = current_date.getTime() / 1000;
-
-//     var time_since = now - start_time;
-
-//     var secs_in_day = 60 * 60 * 1000 * 24;
-//     var   secs_in_hour = 60 * 60 * 1000;
-        
-//     var days = Math.floor(time_since / (secs_in_day) * 1);
-//     var hours = Math.floor((time_since % (secs_in_day)) / (secs_in_hour) * 1);
-//     var mins = Math.floor(((time_since % (secs_in_day)) % (secs_in_hour)) / (60 * 1000) * 1);
-//     var secs = Math.floor((((time_since % (secs_in_day)) % (secs_in_hour)) % (60 * 1000)) / 1000 * 1);
-
-    
-//     console.log("date",secs)
-
-//     document.querySelector('#days').innerHTML = days;
-//     document.querySelector('#hours').innerHTML = hours;
-//     document.querySelector('#mins').innerHTML = mins;
-//     document.querySelector('#secs').innerHTML = secs;
-// }, 1000);
 
 window.onload = function() {
     // Month Day, Year Hour:Minute:Second, id-of-element-container

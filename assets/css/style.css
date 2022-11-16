@@ -54,6 +54,7 @@ body {
     background: rgb(26,26,26);
     background: linear-gradient(60deg, rgba(26,26,26,1) 0%, rgba(3,10,48,1) 100%);
     font-family: 'Archivo Black';
+    overflow-x: hidden;
 }
 
 img {
@@ -123,6 +124,21 @@ ul {
 main {
     position: relative;
 }
+
+/* .circle-blur {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180vw;
+    height: 180vw;
+    background: rgb(255,241,72);
+    background: linear-gradient(54deg, rgba(255,241,72,1) 0%, rgba(144,0,246,1) 100%);
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.8;
+    transition: 0.3s;
+} */
 
 .ecom-img {
     position: fixed;
